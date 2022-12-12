@@ -10,8 +10,8 @@ function Card(props) {
         style={{
           color: props.textColor,
           fontWeight: '700',
-          width: '150px',
-          height: '200px',
+          width: '200px',
+          height: '250px',
           lineHeight: '150px',
           borderRadius: '24px',
           userSelect: 'none',
