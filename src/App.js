@@ -3,43 +3,18 @@ import { useState } from 'react';
 import Rules from './components/Rules';
 import Scoreboard from './components/Scoreboard';
 import Card from './components/Card';
+import Colors from './components/Colors';
 
 function App() {
   const [numberOfCards, setNumberOfCards] = useState(3);
-  let colorArray = [
-    {
-      color: 'BurlyWood',
-      textColor: '#131516',
-    },
-    {
-      color: 'Chartreuse',
-      textColor: '#131516',
-    },
-    {
-      color: 'CornflowerBlue',
-      textColor: '#d8d4cf',
-    },
-    {
-      color: 'Coral',
-      textColor: '#131516',
-    },
-    {
-      color: 'BlueViolet',
-      textColor: '#d8d4cf',
-    },
-    {
-      color: 'Crimson',
-      textColor: '#d8d4cf',
-    },
-    {
-      color: 'DarkOliveGreen',
-      textColor: '#d8d4cf',
-    },
-  ];
+  const [score, setScore] = useState(0);
+  const [highScore, setHighScore] = useState(0);
+
+  let colorArray = Colors(numberOfCards);
   return (
     <div>
       <Rules />
-      <Scoreboard />
+      <Scoreboard score={score} highScore={highScore} />
       <div className='Cards'>
         {colorArray.map(function (item) {
           return <Card color={item.color} textColor={item.textColor} />;

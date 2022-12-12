@@ -1,11 +1,11 @@
-function Scoreboard() {
+function Scoreboard(props) {
   return (
     <div>
       <p>
-        <b>Score:</b>
+        <b>Score: {props.score}</b>
       </p>
       <p>
-        <b>High Score:</b>
+        <b>High Score: {props.highScore}</b>
       </p>
     </div>
   );
