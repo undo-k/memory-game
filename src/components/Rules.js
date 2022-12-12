@@ -8,6 +8,9 @@ function Rules() {
         card that you've already picked before your score will reset and the
         game will start over. Good luck and have fun :)
       </p>
+      <p>
+        Tip: Turn off any dark-mode extensions that could affect the colors!
+      </p>
     </div>
   );
 }
