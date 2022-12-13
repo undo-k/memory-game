@@ -1,5 +1,3 @@
-import shuffle from './../utils/shuffle';
-
 function Colors(numberOfCards) {
   const DARK = '#15141A'; // #15141A
   const LIGHT = '#ededf0';
@@ -569,8 +567,6 @@ function Colors(numberOfCards) {
       textColor: DARK,
     },
   ];
-
-  shuffle(colorArray);
 
   return colorArray.slice(0, numberOfCards);
 }
