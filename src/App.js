@@ -13,11 +13,9 @@ function App() {
   const [highScore, setHighScore] = useState(0);
   const [level, setLevel] = useState(1);
   const [colors, setColors] = useState(
-    shuffle(
-      Colors(numberOfCards).map((item) => {
-        return { used: false, ...item };
-      })
-    )
+    Colors(numberOfCards).map((item) => {
+      return { used: false, ...item };
+    })
   );
 
   useEffect(() => {
@@ -44,11 +42,9 @@ function App() {
 
   const getNewColors = () => {
     setColors(
-      shuffle(
-        Colors(numberOfCards).map((item) => {
-          return { used: false, ...item };
-        })
-      )
+      Colors(numberOfCards).map((item) => {
+        return { used: false, ...item };
+      })
     );
   };
 
