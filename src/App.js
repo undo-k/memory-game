@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Rules from './components/Rules';
 import Scoreboard from './components/Scoreboard';
 import Card from './components/Card';
@@ -12,6 +12,19 @@ function App() {
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
   const [level, setLevel] = useState(1);
+  const [colors, setColors] = useState(
+    Colors(numberOfCards).map((item) => {
+      return { used: false, ...item };
+    })
+  );
+
+  useEffect(() => {
+    getNewColors();
+  }, [level]);
+
+  useEffect(() => {
+    if (score > highScore) setHighScore(score);
+  }, [score]);
 
   const incrementNumberOfCards = () => {
     let previous = numberOfCards;
@@ -23,32 +36,93 @@ function App() {
     setScore(score + 1);
   };
 
-  const markCardSelected = (e) => {
-    colorArray.map(function (item) {
-      if (item.key == e.target.textContent && item.used != true) {
-        item.used = true;
-        incrementScore();
-        // increase level
-      }
-    });
+  const incrementLevel = () => {
+    setLevel(level + 1);
   };
 
-  let colorArray = Colors(numberOfCards).map((item) => {
-    return { used: false, ...item };
-  });
+  const shuffleColors = () => {
+    let colorArray = colors.slice(0);
+    shuffle(colorArray);
+    setColors(colorArray);
+  };
+
+  const getNewColors = () => {
+    setColors(
+      Colors(numberOfCards).map((item) => {
+        return { used: false, ...item };
+      })
+    );
+  };
+
+  const isLevelComplete = () => {
+    if (!colors.some((color) => color.used === false)) {
+      incrementNumberOfCards();
+      incrementLevel();
+    }
+  };
+
+  const loseGame = () => {
+    setNumberOfCards(3);
+    getNewColors();
+    setScore(0);
+    setLevel(1);
+  };
+
+  const markCardUsed = (key) => {
+    let colorArray = colors.slice(0);
+
+    colorArray.map((item) => {
+      if (item.key == key) item.used = true;
+    });
+
+    setColors(colorArray);
+  };
+
+  const isCardLegalChoice = (card) => {
+    let retval = false;
+
+    colors.map(function (colorElement) {
+      if (colorElement.key == card && colorElement.used == true) {
+        retval = false;
+      } else if (colorElement.key == card && colorElement.used == false) {
+        retval = true;
+      }
+    });
+
+    return retval;
+  };
+
+  const handleSelection = (e) => {
+    if (e.target.id != 'card') return;
+
+    let key = e.target.textContent;
+
+    if (isCardLegalChoice(key)) {
+      markCardUsed(key);
+      incrementScore();
+      if (isLevelComplete()) {
+        incrementLevel();
+        incrementNumberOfCards();
+      } else {
+        shuffleColors();
+      }
+    } else {
+      loseGame();
+    }
+  };
 
   return (
     <div>
       <Rules />
       <Scoreboard score={score} highScore={highScore} level={level} />
       <div className='Cards'>
-        {colorArray.map(function (item) {
+        {colors.map((colorElement) => {
           return (
             <Card
-              key={item.key}
-              color={item.key}
-              textColor={item.textColor}
-              markCardSelected={markCardSelected}
+              key={colorElement.key}
+              color={colorElement.key}
+              textColor={colorElement.textColor}
+              handleSelection={handleSelection}
             />
           );
         })}

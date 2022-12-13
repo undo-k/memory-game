@@ -8,10 +8,10 @@ function Card(props) {
   };
 
   useEffect(() => {
-    document.addEventListener('click', props.markCardSelected);
+    document.addEventListener('click', props.handleSelection);
 
     return () => {
-      document.removeEventListener('click', props.markCardSelected);
+      document.removeEventListener('click', props.handleSelection);
     };
   });
 
