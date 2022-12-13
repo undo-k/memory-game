@@ -13,9 +13,12 @@ function Card(props) {
           width: '200px',
           height: '250px',
           lineHeight: '150px',
-          borderRadius: '24px',
+          borderRadius: '12px',
           userSelect: 'none',
           backgroundColor: props.color,
+          //   borderStyle: 'solid',
+          //   borderWidth: '2px',
+          //   borderColor: '#ededf0',
         }}
       >
         {props.color}
