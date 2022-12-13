@@ -3,6 +3,15 @@ import { useEffect, useState } from 'react';
 function Card(props) {
   const [color, setColor] = useState(props.color);
 
+  useEffect(() => {
+    const selectCard = () => {};
+    document.addEventListener('click', selectCard);
+
+    return () => {
+      document.removeEventListener('click', selectCard);
+    };
+  });
+
   return (
     <div>
       <div
