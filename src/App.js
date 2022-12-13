@@ -19,6 +19,20 @@ function App() {
     setPreviousNumberOfCards(previous);
   };
 
+  const incrementScore = () => {
+    setScore(score + 1);
+  };
+
+  const markCardSelected = (e) => {
+    colorArray.map(function (item) {
+      if (item.key == e.target.textContent && item.used != true) {
+        item.used = true;
+        incrementScore();
+        // increase level
+      }
+    });
+  };
+
   let colorArray = Colors(numberOfCards).map((item) => {
     return { used: false, ...item };
   });
@@ -29,8 +43,14 @@ function App() {
       <Scoreboard score={score} highScore={highScore} level={level} />
       <div className='Cards'>
         {colorArray.map(function (item) {
-          console.log(item);
-          return <Card color={item.color} textColor={item.textColor} />;
+          return (
+            <Card
+              key={item.key}
+              color={item.key}
+              textColor={item.textColor}
+              markCardSelected={markCardSelected}
+            />
+          );
         })}
       </div>
     </div>

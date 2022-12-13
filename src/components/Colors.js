@@ -5,567 +5,567 @@ function Colors(numberOfCards) {
   const LIGHT = '#ededf0';
   const colorArray = [
     {
-      color: 'AliceBlue',
+      key: 'AliceBlue',
       textColor: DARK,
     },
     {
-      color: 'AntiqueWhite',
+      key: 'AntiqueWhite',
       textColor: DARK,
     },
     {
-      color: 'Aqua',
+      key: 'Aqua',
       textColor: DARK,
     },
     {
-      color: 'Aquamarine',
+      key: 'Aquamarine',
       textColor: DARK,
     },
     {
-      color: 'Azure',
+      key: 'Azure',
       textColor: DARK,
     },
     {
-      color: 'Beige',
+      key: 'Beige',
       textColor: DARK,
     },
     {
-      color: 'Bisque',
+      key: 'Bisque',
       textColor: DARK,
     },
     {
-      color: 'Black',
+      key: 'Black',
       textColor: LIGHT,
     },
     {
-      color: 'BlanchedAlmond',
+      key: 'BlanchedAlmond',
       textColor: DARK,
     },
     {
-      color: 'Blue',
+      key: 'Blue',
       textColor: LIGHT,
     },
     {
-      color: 'BlueViolet',
+      key: 'BlueViolet',
       textColor: LIGHT,
     },
     {
-      color: 'Brown',
+      key: 'Brown',
       textColor: LIGHT,
     },
     {
-      color: 'BurlyWood',
+      key: 'BurlyWood',
       textColor: DARK,
     },
     {
-      color: 'CadetBlue',
+      key: 'CadetBlue',
       textColor: LIGHT,
     },
     {
-      color: 'Chartreuse',
+      key: 'Chartreuse',
       textColor: DARK,
     },
     {
-      color: 'Chocolate',
+      key: 'Chocolate',
       textColor: LIGHT,
     },
     {
-      color: 'Coral',
+      key: 'Coral',
       textColor: DARK,
     },
     {
-      color: 'CornflowerBlue',
+      key: 'CornflowerBlue',
       textColor: LIGHT,
     },
     {
-      color: 'Cornsilk',
+      key: 'Cornsilk',
       textColor: DARK,
     },
     {
-      color: 'Crimson',
+      key: 'Crimson',
       textColor: LIGHT,
     },
     {
-      color: 'Cyan',
+      key: 'Cyan',
       textColor: DARK,
     },
     {
-      color: 'DarkBlue',
+      key: 'DarkBlue',
       textColor: LIGHT,
     },
     {
-      color: 'DarkCyan',
+      key: 'DarkCyan',
       textColor: LIGHT,
     },
     {
-      color: 'DarkGoldenRod',
+      key: 'DarkGoldenRod',
       textColor: LIGHT,
     },
     {
-      color: 'DarkGrey',
+      key: 'DarkGrey',
       textColor: DARK,
     },
     {
-      color: 'DarkGreen',
+      key: 'DarkGreen',
       textColor: LIGHT,
     },
     {
-      color: 'DarkKhaki',
+      key: 'DarkKhaki',
       textColor: DARK,
     },
     {
-      color: 'DarkMagenta',
+      key: 'DarkMagenta',
       textColor: LIGHT,
     },
     {
-      color: 'DarkOliveGreen',
+      key: 'DarkOliveGreen',
       textColor: LIGHT,
     },
     {
-      color: 'DarkOrange',
+      key: 'DarkOrange',
       textColor: DARK,
     },
     {
-      color: 'DarkOrchid',
+      key: 'DarkOrchid',
       textColor: LIGHT,
     },
     {
-      color: 'DarkRed',
+      key: 'DarkRed',
       textColor: LIGHT,
     },
     {
-      color: 'DarkSalmon',
+      key: 'DarkSalmon',
       textColor: DARK,
     },
     {
-      color: 'DarkSeaGreen',
+      key: 'DarkSeaGreen',
       textColor: DARK,
     },
     {
-      color: 'DarkSlateBlue',
+      key: 'DarkSlateBlue',
       textColor: LIGHT,
     },
     {
-      color: 'DarkSlateGrey',
+      key: 'DarkSlateGrey',
       textColor: LIGHT,
     },
     {
-      color: 'DarkTurquoise',
+      key: 'DarkTurquoise',
       textColor: DARK,
     },
     {
-      color: 'DarkViolet',
+      key: 'DarkViolet',
       textColor: LIGHT,
     },
     {
-      color: 'DeepPink',
+      key: 'DeepPink',
       textColor: LIGHT,
     },
     {
-      color: 'DeepSkyBlue',
+      key: 'DeepSkyBlue',
       textColor: LIGHT,
     },
     {
-      color: 'DimGrey',
+      key: 'DimGrey',
       textColor: LIGHT,
     },
     {
-      color: 'DodgerBlue',
+      key: 'DodgerBlue',
       textColor: LIGHT,
     },
     {
-      color: 'FireBrick',
+      key: 'FireBrick',
       textColor: LIGHT,
     },
     {
-      color: 'FloralWhite',
+      key: 'FloralWhite',
       textColor: DARK,
     },
     {
-      color: 'ForestGreen',
+      key: 'ForestGreen',
       textColor: LIGHT,
     },
     {
-      color: 'Fuchsia',
+      key: 'Fuchsia',
       textColor: LIGHT,
     },
     {
-      color: 'Gainsboro',
+      key: 'Gainsboro',
       textColor: DARK,
     },
     {
-      color: 'GhostWhite',
+      key: 'GhostWhite',
       textColor: DARK,
     },
     {
-      color: 'Gold',
+      key: 'Gold',
       textColor: DARK,
     },
     {
-      color: 'GoldenRod',
+      key: 'GoldenRod',
       textColor: DARK,
     },
     {
-      color: 'Grey',
+      key: 'Grey',
       textColor: LIGHT,
     },
     {
-      color: 'Green',
+      key: 'Green',
       textColor: LIGHT,
     },
     {
-      color: 'GreenYellow',
+      key: 'GreenYellow',
       textColor: DARK,
     },
     {
-      color: 'HoneyDew',
+      key: 'HoneyDew',
       textColor: DARK,
     },
     {
-      color: 'HotPink',
+      key: 'HotPink',
       textColor: DARK,
     },
     {
-      color: 'IndianRed',
+      key: 'IndianRed',
       textColor: LIGHT,
     },
     {
-      color: 'Indigo',
+      key: 'Indigo',
       textColor: LIGHT,
     },
     {
-      color: 'Ivory',
+      key: 'Ivory',
       textColor: DARK,
     },
     {
-      color: 'Khaki',
+      key: 'Khaki',
       textColor: DARK,
     },
     {
-      color: 'Lavender',
+      key: 'Lavender',
       textColor: DARK,
     },
     {
-      color: 'LavenderBlush',
+      key: 'LavenderBlush',
       textColor: DARK,
     },
     {
-      color: 'LawnGreen',
+      key: 'LawnGreen',
       textColor: DARK,
     },
     {
-      color: 'LemonChiffon',
+      key: 'LemonChiffon',
       textColor: DARK,
     },
     {
-      color: 'LightBlue',
+      key: 'LightBlue',
       textColor: DARK,
     },
     {
-      color: 'LightCoral',
+      key: 'LightCoral',
       textColor: DARK,
     },
     {
-      color: 'LightCyan',
+      key: 'LightCyan',
       textColor: DARK,
     },
     {
-      color: 'LightGoldenRodYellow',
+      key: 'LightGoldenRodYellow',
       textColor: DARK,
     },
     {
-      color: 'LightGrey',
+      key: 'LightGrey',
       textColor: DARK,
     },
     {
-      color: 'LightGreen',
+      key: 'LightGreen',
       textColor: DARK,
     },
     {
-      color: 'LightPink',
+      key: 'LightPink',
       textColor: DARK,
     },
     {
-      color: 'LightSalmon',
+      key: 'LightSalmon',
       textColor: DARK,
     },
     {
-      color: 'LightSeaGreen',
+      key: 'LightSeaGreen',
       textColor: LIGHT,
     },
     {
-      color: 'LightSkyBlue',
+      key: 'LightSkyBlue',
       textColor: DARK,
     },
     {
-      color: 'LightSlateGrey',
+      key: 'LightSlateGrey',
       textColor: LIGHT,
     },
     {
-      color: 'LightSteelBlue',
+      key: 'LightSteelBlue',
       textColor: DARK,
     },
     {
-      color: 'LightYellow',
+      key: 'LightYellow',
       textColor: DARK,
     },
     {
-      color: 'Lime',
+      key: 'Lime',
       textColor: DARK,
     },
     {
-      color: 'LimeGreen',
+      key: 'LimeGreen',
       textColor: LIGHT,
     },
     {
-      color: 'Linen',
+      key: 'Linen',
       textColor: DARK,
     },
     {
-      color: 'Magenta',
+      key: 'Magenta',
       textColor: LIGHT,
     },
     {
-      color: 'Maroon',
+      key: 'Maroon',
       textColor: LIGHT,
     },
     {
-      color: 'MediumAquaMarine',
+      key: 'MediumAquaMarine',
       textColor: DARK,
     },
     {
-      color: 'MediumBlue',
+      key: 'MediumBlue',
       textColor: LIGHT,
     },
     {
-      color: 'MediumOrchid',
+      key: 'MediumOrchid',
       textColor: LIGHT,
     },
     {
-      color: 'MediumPurple',
+      key: 'MediumPurple',
       textColor: LIGHT,
     },
     {
-      color: 'MediumSeaGreen',
+      key: 'MediumSeaGreen',
       textColor: LIGHT,
     },
     {
-      color: 'MediumSlateBlue',
+      key: 'MediumSlateBlue',
       textColor: LIGHT,
     },
     {
-      color: 'MediumSpringGreen',
+      key: 'MediumSpringGreen',
       textColor: DARK,
     },
     {
-      color: 'MediumTurquoise',
+      key: 'MediumTurquoise',
       textColor: DARK,
     },
     {
-      color: 'MediumVioletRed',
+      key: 'MediumVioletRed',
       textColor: LIGHT,
     },
     {
-      color: 'MidnightBlue',
+      key: 'MidnightBlue',
       textColor: LIGHT,
     },
     {
-      color: 'MintCream',
+      key: 'MintCream',
       textColor: DARK,
     },
     {
-      color: 'MistyRose',
+      key: 'MistyRose',
       textColor: DARK,
     },
     {
-      color: 'Moccasin',
+      key: 'Moccasin',
       textColor: DARK,
     },
     {
-      color: 'NavajoWhite',
+      key: 'NavajoWhite',
       textColor: DARK,
     },
     {
-      color: 'Navy',
+      key: 'Navy',
       textColor: LIGHT,
     },
     {
-      color: 'OldLace',
+      key: 'OldLace',
       textColor: DARK,
     },
     {
-      color: 'Olive',
+      key: 'Olive',
       textColor: LIGHT,
     },
     {
-      color: 'OliveDrab',
+      key: 'OliveDrab',
       textColor: LIGHT,
     },
     {
-      color: 'Orange',
+      key: 'Orange',
       textColor: DARK,
     },
     {
-      color: 'OrangeRed',
+      key: 'OrangeRed',
       textColor: LIGHT,
     },
     {
-      color: 'Orchid',
+      key: 'Orchid',
       textColor: DARK,
     },
     {
-      color: 'PaleGoldenRod',
+      key: 'PaleGoldenRod',
       textColor: DARK,
     },
     {
-      color: 'PaleGreen',
+      key: 'PaleGreen',
       textColor: DARK,
     },
     {
-      color: 'PaleTurquoise',
+      key: 'PaleTurquoise',
       textColor: DARK,
     },
     {
-      color: 'PaleVioletRed',
+      key: 'PaleVioletRed',
       textColor: LIGHT,
     },
     {
-      color: 'PapayaWhip',
+      key: 'PapayaWhip',
       textColor: DARK,
     },
     {
-      color: 'PeachPuff',
+      key: 'PeachPuff',
       textColor: DARK,
     },
     {
-      color: 'Peru',
+      key: 'Peru',
       textColor: LIGHT,
     },
     {
-      color: 'Pink',
+      key: 'Pink',
       textColor: DARK,
     },
     {
-      color: 'Plum',
+      key: 'Plum',
       textColor: DARK,
     },
     {
-      color: 'PowderBlue',
+      key: 'PowderBlue',
       textColor: DARK,
     },
     {
-      color: 'Purple',
+      key: 'Purple',
       textColor: LIGHT,
     },
     {
-      color: 'RebeccaPurple',
+      key: 'RebeccaPurple',
       textColor: LIGHT,
     },
     {
-      color: 'Red',
+      key: 'Red',
       textColor: LIGHT,
     },
     {
-      color: 'RosyBrown',
+      key: 'RosyBrown',
       textColor: DARK,
     },
     {
-      color: 'RoyalBlue',
+      key: 'RoyalBlue',
       textColor: LIGHT,
     },
     {
-      color: 'SaddleBrown',
+      key: 'SaddleBrown',
       textColor: LIGHT,
     },
     {
-      color: 'Salmon',
+      key: 'Salmon',
       textColor: DARK,
     },
     {
-      color: 'SandyBrown',
+      key: 'SandyBrown',
       textColor: DARK,
     },
     {
-      color: 'SeaGreen',
+      key: 'SeaGreen',
       textColor: LIGHT,
     },
     {
-      color: 'SeaShell',
+      key: 'SeaShell',
       textColor: DARK,
     },
     {
-      color: 'Sienna',
+      key: 'Sienna',
       textColor: LIGHT,
     },
     {
-      color: 'Silver',
+      key: 'Silver',
       textColor: DARK,
     },
     {
-      color: 'SkyBlue',
+      key: 'SkyBlue',
       textColor: DARK,
     },
     {
-      color: 'SlateBlue',
+      key: 'SlateBlue',
       textColor: LIGHT,
     },
     {
-      color: 'SlateGrey',
+      key: 'SlateGrey',
       textColor: LIGHT,
     },
     {
-      color: 'Snow',
+      key: 'Snow',
       textColor: DARK,
     },
     {
-      color: 'SpringGreen',
+      key: 'SpringGreen',
       textColor: DARK,
     },
     {
-      color: 'SteelBlue',
+      key: 'SteelBlue',
       textColor: LIGHT,
     },
     {
-      color: 'Tan',
+      key: 'Tan',
       textColor: DARK,
     },
     {
-      color: 'Teal',
+      key: 'Teal',
       textColor: LIGHT,
     },
     {
-      color: 'Thistle',
+      key: 'Thistle',
       textColor: DARK,
     },
     {
-      color: 'Tomato',
+      key: 'Tomato',
       textColor: LIGHT,
     },
     {
-      color: 'Turquoise',
+      key: 'Turquoise',
       textColor: DARK,
     },
     {
-      color: 'Violet',
+      key: 'Violet',
       textColor: DARK,
     },
     {
-      color: 'Wheat',
+      key: 'Wheat',
       textColor: DARK,
     },
     {
-      color: 'White',
+      key: 'White',
       textColor: DARK,
     },
     {
-      color: 'WhiteSmoke',
+      key: 'WhiteSmoke',
       textColor: DARK,
     },
     {
-      color: 'Yellow',
+      key: 'Yellow',
       textColor: DARK,
     },
     {
-      color: 'YellowGreen',
+      key: 'YellowGreen',
       textColor: DARK,
     },
   ];

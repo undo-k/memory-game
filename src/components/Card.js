@@ -2,36 +2,37 @@ import { useEffect, useState } from 'react';
 
 function Card(props) {
   const [color, setColor] = useState(props.color);
+  const [textColor, setTextColor] = useState(props.textColor);
+  const func = () => {
+    console.log('Color of the card clicked: ' + color);
+  };
 
   useEffect(() => {
-    const selectCard = () => {};
-    document.addEventListener('click', selectCard);
+    document.addEventListener('click', props.markCardSelected);
 
     return () => {
-      document.removeEventListener('click', selectCard);
+      document.removeEventListener('click', props.markCardSelected);
     };
   });
 
   return (
-    <div>
-      <div
-        id='card'
-        style={{
-          color: props.textColor,
-          fontWeight: '700',
-          width: '200px',
-          height: '250px',
-          lineHeight: '150px',
-          borderRadius: '12px',
-          userSelect: 'none',
-          backgroundColor: props.color,
-          //   borderStyle: 'solid',
-          //   borderWidth: '2px',
-          //   borderColor: '#ededf0',
-        }}
-      >
-        {props.color}
-      </div>
+    <div
+      id='card'
+      style={{
+        color: textColor,
+        fontWeight: '700',
+        width: '200px',
+        height: '250px',
+        lineHeight: '150px',
+        borderRadius: '12px',
+        userSelect: 'none',
+        backgroundColor: color,
+        //   borderStyle: 'solid',
+        //   borderWidth: '2px',
+        //   borderColor: '#ededf0',
+      }}
+    >
+      {color}
     </div>
   );
 }
