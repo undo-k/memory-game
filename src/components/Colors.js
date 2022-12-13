@@ -308,7 +308,7 @@ function Colors(numberOfCards) {
     },
     {
       color: 'Lime',
-      textColor: LIGHT,
+      textColor: DARK,
     },
     {
       color: 'LimeGreen',
