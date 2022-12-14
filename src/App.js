@@ -57,6 +57,7 @@ function App() {
 
   const loseGame = () => {
     setNumberOfCards(3);
+    setPreviousNumberOfCards(2);
     getNewColors();
     setScore(0);
     setLevel(1);
@@ -65,8 +66,8 @@ function App() {
   const markCardUsed = (key) => {
     let colorArray = colors.slice(0);
 
-    colorArray.map((item) => {
-      if (item.key == key) item.used = true;
+    colorArray.forEach((element) => {
+      if (element.key === key) element.used = true;
     });
 
     setColors(colorArray);
@@ -75,10 +76,10 @@ function App() {
   const isCardLegalChoice = (card) => {
     let retval = false;
 
-    colors.map(function (colorElement) {
-      if (colorElement.key == card && colorElement.used == true) {
+    colors.forEach((element) => {
+      if (element.key === card && element.used === true) {
         retval = false;
-      } else if (colorElement.key == card && colorElement.used == false) {
+      } else if (element.key === card && element.used === false) {
         retval = true;
       }
     });
@@ -87,7 +88,7 @@ function App() {
   };
 
   const handleSelection = (e) => {
-    if (e.target.id != 'card') return;
+    if (e.target.id !== 'card') return;
 
     let key = e.target.textContent;
 
